@@ -46,6 +46,7 @@
 						<tr>
 							<th width="1%">File</th>
 							<th>Keterangan</th>
+							<th>Waktu</th>
 							<th width="1%">OPSI</th>
 						</tr>
 					</thead>
@@ -53,7 +54,8 @@
 						{{-- @foreach($gambar as $g) --}}
 						<tr>
 							<td><img width="150px" src="{{ url('/data_file/'.$gambar->file) }}"></td>
-							<td>{{$gambar->keterangan}}</td>
+                            <td>{{$gambar->keterangan}}</td>
+                            <td>{{$gambar->created_at}}</td>
 							<td><a class="btn btn-danger" href="/detail/{{ $gambar->id }}">Lihat Selengkapnya</a></td>
 							{{-- <td><a class="btn btn-danger" href="/hapus/{{ $g->id }}">HAPUS</a></td> --}}
 						</tr>

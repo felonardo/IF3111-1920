@@ -6,6 +6,7 @@
 
 </head>
 <body>
+    <div id="demo">
 	<div class="row">
 		<div class="container">
 
@@ -37,7 +38,8 @@
 					<input type="submit" value="Upload" class="btn btn-primary">
                 </form> --}}
 
-                <a href="/upload">Buat Laporan</a>
+                {{-- <a href="/upload">Buat Laporan</a> --}}
+                <button type="submit" onclick="loadDoc()">Buat Laporan</button>
 
 				<h4 class="my-5">Data</h4>
 
@@ -55,13 +57,31 @@
 							<td><img width="150px" src="{{ url('/data_file/'.$g->file) }}"></td>
 							<td>{{$g->keterangan}}</td>
 							<td><a class="btn btn-danger" href="/detail/{{ $g->id }}">Lihat Selengkapnya</a></td>
-							<td><a class="btn btn-danger" href="/hapus/{{ $g->id }}">HAPUS</a></td>
+							{{-- <td><a class="btn btn-danger" href="/hapus/{{ $g->id }}">HAPUS</a></td> --}}
 						</tr>
 						@endforeach
 					</tbody>
 				</table>
 			</div>
 		</div>
-	</div>
+    </div>
+</div>
+
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "/upload", true);
+  xhttp.send();
+}
+</script>
+
+
 </body>
 </html>

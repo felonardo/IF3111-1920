@@ -22,6 +22,7 @@
 				@endif
 
 				<form action="/upload/proses" method="POST" enctype="multipart/form-data">
+				{{-- <form action="prosesUpload()" method="POST" enctype="multipart/form-data"> --}}
 					{{ csrf_field() }}
 
 
@@ -61,6 +62,24 @@
 				</table> --}}
 			</div>
 		</div>
-	</div>
+    </div>
+
+
+
+<script>
+function prosesUpload() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "/", true);
+  xhttp.send();
+}
+</script>
+
+
 </body>
 </html>
