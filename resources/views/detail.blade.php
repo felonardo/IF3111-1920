@@ -6,7 +6,8 @@
 
 </head>
 <body>
-	<div class="row">
+<div id="demo">
+        <div class="row">
 		<div class="container">
 
 			<h2 class="h2">Simple Lapor</h2>
@@ -56,14 +57,18 @@
 							<td><img width="150px" src="{{ url('/data_file/'.$gambar->file) }}"></td>
                             <td>{{$gambar->keterangan}}</td>
                             <td>{{$gambar->created_at}}</td>
-							<td><a class="btn btn-danger" href="/detail/{{ $gambar->id }}">Lihat Selengkapnya</a></td>
-							{{-- <td><a class="btn btn-danger" href="/hapus/{{ $g->id }}">HAPUS</a></td> --}}
+							<td><button onclick="deleteData({{$gambar->id}})">HAPUS</button></td>
+                            {{-- <td><button type="submit" onclick="showDetail({{$g->id}})">Lihat Selengkapnya</button></td> --}}
 						</tr>
 						{{-- @endforeach --}}
 					</tbody>
 				</table>
 			</div>
 		</div>
-	</div>
+    </div>
+
+
+
+
 </body>
 </html>

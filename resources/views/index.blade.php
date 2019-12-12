@@ -39,7 +39,7 @@
                 </form> --}}
 
                 {{-- <a href="/upload">Buat Laporan</a> --}}
-                <button type="submit" onclick="loadDoc()">Buat Laporan</button>
+                <button type="submit" onclick="addLaporan()">Buat Laporan</button>
 
 				<h4 class="my-5">Data</h4>
 
@@ -56,7 +56,8 @@
 						<tr>
 							<td><img width="150px" src="{{ url('/data_file/'.$g->file) }}"></td>
 							<td>{{$g->keterangan}}</td>
-							<td><a class="btn btn-danger" href="/detail/{{ $g->id }}">Lihat Selengkapnya</a></td>
+                            {{-- <td><a class="btn btn-danger" href="/detail/{{ $g->id }}">Lihat Selengkapnya</a></td> --}}
+                            <td><button type="submit" onclick="showDetail({{$g->id}})">Lihat Selengkapnya</button></td>
 							{{-- <td><a class="btn btn-danger" href="/hapus/{{ $g->id }}">HAPUS</a></td> --}}
 						</tr>
 						@endforeach
@@ -69,7 +70,7 @@
 
 
 <script>
-function loadDoc() {
+function addLaporan() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -79,6 +80,42 @@ function loadDoc() {
   };
   xhttp.open("GET", "/upload", true);
   xhttp.send();
+}
+
+
+function showDetail(i) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "/detail/"+i, true);
+  xhttp.send();
+}
+
+
+function deleteData(i) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "/hapus/"+i, true);
+  xhttp.send();
+}
+
+
+function prosesUpload() {
+    var form = document.getElementById('form-id');
+var formData = new FormData(form);
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.open("POST", "/upload/proses", true);
+  xhttp.send(formData);
 }
 </script>
 

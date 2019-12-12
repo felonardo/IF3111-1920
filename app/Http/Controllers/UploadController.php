@@ -18,7 +18,7 @@ class UploadController extends Controller
     public function index()
     {
         $gambar = Gambar::get();
-        return view('index', ['gambar' => $gambar]);
+        return view('index', ['gambar' => $gambar->reverse()]);
     }
 
     public function proses_upload(Request $request)
@@ -54,7 +54,7 @@ class UploadController extends Controller
         // hapus data
         Gambar::where('id', $id)->delete();
 
-        return redirect()->back();
+        return redirect('/');
     }
 
     public function detail($id)
