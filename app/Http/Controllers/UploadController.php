@@ -56,4 +56,14 @@ class UploadController extends Controller
 
         return redirect()->back();
     }
+
+    public function detail($id)
+    {
+        $gambar = Gambar::where('id', $id)->first();
+
+        $gambar->get();
+        // Gambar::find($id);
+
+        return view('detail', ['gambar' => $gambar]);
+    }
 }

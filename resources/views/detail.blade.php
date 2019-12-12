@@ -20,27 +20,27 @@
 					@endforeach
 				</div>
 				@endif
-
+{{--
 				<form action="/upload/proses" method="POST" enctype="multipart/form-data">
 					{{ csrf_field() }}
 
+					<div class="form-group">
+						<b>File Gambar</b><br/>
+						<input type="file" name="file">
+					</div>
 
 					<div class="form-group">
 						<b>Keterangan</b>
 						<textarea class="form-control" name="keterangan"></textarea>
 					</div>
 
-					<div class="form-group">
-						<b>File Gambar</b><br/>
-						<input type="file" name="file">
-                    </div>
-
-
 					<input type="submit" value="Upload" class="btn btn-primary">
-				</form>
+                </form> --}}
 
-				{{-- <h4 class="my-5">Data</h4> --}}
-{{--
+                {{-- <a href="/upload">Buat Laporan</a> --}}
+
+				<h4 class="my-5">Data</h4>
+
 				<table class="table table-bordered table-striped">
 					<thead>
 						<tr>
@@ -50,15 +50,16 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($gambar as $g)
+						{{-- @foreach($gambar as $g) --}}
 						<tr>
-							<td><img width="150px" src="{{ url('/data_file/'.$g->file) }}"></td>
-							<td>{{$g->keterangan}}</td>
-							<td><a class="btn btn-danger" href="/upload/hapus/{{ $g->id }}">HAPUS</a></td>
+							<td><img width="150px" src="{{ url('/data_file/'.$gambar->file) }}"></td>
+							<td>{{$gambar->keterangan}}</td>
+							<td><a class="btn btn-danger" href="/detail/{{ $gambar->id }}">Lihat Selengkapnya</a></td>
+							{{-- <td><a class="btn btn-danger" href="/hapus/{{ $g->id }}">HAPUS</a></td> --}}
 						</tr>
-						@endforeach
+						{{-- @endforeach --}}
 					</tbody>
-				</table> --}}
+				</table>
 			</div>
 		</div>
 	</div>

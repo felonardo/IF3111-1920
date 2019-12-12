@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', 'UploadController@index');
-Route::get('/detail', 'UploadController@detail');
+Route::get('/detail/{id}', 'UploadController@detail');
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');
 Route::get('/hapus/{id}', 'UploadController@hapus');
