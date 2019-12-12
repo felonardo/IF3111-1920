@@ -42,7 +42,7 @@ class UploadController extends Controller
             'keterangan' => $request->keterangan,
         ]);
 
-        return redirect()->back();
+        return redirect('/');
     }
 
     public function hapus($id)
