@@ -1,5 +1,64 @@
 h2 {
-    color: aqua;
+    border: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 75px;
+    position: relative;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    /*background-color: #94b1e3;*/
+    height: 115px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+header .search-box {
+    width: 100%;
+    min-height: 10px;
+    margin: 0px auto;
+    position: relative;
+    padding: 5px;
+    overflow: hidden;
+}
+
+header .search-box form {
+    width: 100%;
+}
+
+header .search-box form input[type="text"] {
+    width: 84%;
+    padding: 15px;
+    border: 1px solid black;
+    float: left;
+}
+
+header .search-box form button {
+    width: 12%;
+    padding: 15px;
+    border: 1px solid black;
+    float: left;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    background-position: 2px 2px;
+    /*background-repeat: no-repeat;*/
+}
+
+
+.container {
+    text-align: relative;
+    border: white;
+    height: 90px;
+    padding: 80px;
+    position: relative;
+    top: 50%;
+    margin-top: -20px;
 }
 
 /* Dropdown Button */

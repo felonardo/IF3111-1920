@@ -1,3 +1,10 @@
-h2 {
-    color: aqua;
+h1 {
+    border: white;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 128px;
+    line-height: 75px;
+    position: relative;
 }

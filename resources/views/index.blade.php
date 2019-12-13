@@ -1,18 +1,38 @@
 <html>
 <head>
-	<title>Tutorial Laravel #30 : Membuat Upload File Dengan Laravel</title>
+	<title>Halaman utama</title>
 	{{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
 </head>
 <body>
+
     <div id="demo">
 	<div class="row">
 		<div class="container">
 
-			<h2 class="h2">Simple Lapor</h2>
+            <h2 class="h2">Simple Lapor</h2>
 
-			<div class="col-lg-8 mx-auto my-5">
+<header>
+			<div class="search-box">
+				<form action="" method="POST">
+					<input name="search" placeholder="Cari" required="yes" type="text">
+			    	<button type="submit">Cari</button>
+				</form>
+            </div>
+
+                <button type="submit" onclick="addLaporan()">Buat Laporan/ Komentar</button>
+        </header>
+
+{{-- </div> --}}
+
+<div class="recently">
+<p>Laporan/Komentar terakhir</p><br>
+
+<div class="garis">
+</div>
+
+
 
 				@if(count($errors) > 0)
 				<div class="alert alert-danger">
@@ -20,26 +40,8 @@
 					{{ $error }} <br/>
 					@endforeach
 				</div>
-				@endif
-{{--
-				<form action="/upload/proses" method="POST" enctype="multipart/form-data">
-					{{ csrf_field() }}
+                @endif
 
-					<div class="form-group">
-						<b>File Gambar</b><br/>
-						<input type="file" name="file">
-					</div>
-
-					<div class="form-group">
-						<b>Keterangan</b>
-						<textarea class="form-control" name="keterangan"></textarea>
-					</div>
-
-					<input type="submit" value="Upload" class="btn btn-primary">
-                </form> --}}
-
-                {{-- <a href="/upload">Buat Laporan</a> --}}
-                <button type="submit" onclick="addLaporan()">Buat Laporan</button>
 
 				<h4 class="my-5">Data</h4>
 
@@ -66,7 +68,6 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
     </div>
 </div>
 
