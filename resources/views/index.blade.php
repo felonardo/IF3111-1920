@@ -48,6 +48,7 @@
 						<tr>
 							<th width="1%">File</th>
 							<th>Keterangan</th>
+							<th>Aspek</th>
 							<th width="1%">OPSI</th>
 						</tr>
 					</thead>
@@ -56,6 +57,7 @@
 						<tr>
 							<td><img width="150px" src="{{ url('/data_file/'.$g->file) }}"></td>
 							<td>{{$g->keterangan}}</td>
+							<td>{{$g->aspek}}</td>
                             {{-- <td><a class="btn btn-danger" href="/detail/{{ $g->id }}">Lihat Selengkapnya</a></td> --}}
                             <td><button type="submit" onclick="showDetail({{$g->id}})">Lihat Selengkapnya</button></td>
 							{{-- <td><a class="btn btn-danger" href="/hapus/{{ $g->id }}">HAPUS</a></td> --}}
@@ -109,14 +111,6 @@ function deleteData(i) {
 }
 
 
-function prosesUpload() {
-    var form = document.getElementById('form-id');
-var formData = new FormData(form);
-  var xhttp = new XMLHttpRequest();
-
-  xhttp.open("POST", "/upload/proses", true);
-  xhttp.send(formData);
-}
 </script>
 
 

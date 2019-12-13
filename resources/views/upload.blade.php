@@ -36,6 +36,19 @@
 						<input type="file" name="file">
                     </div>
 
+                    <div class="dropdown">
+  {{-- <button class="dropbtn">Aspek ></i></button> --}}
+  {{-- <div class="dropdown-content"> --}}
+    <select name="aspek" class="dropbtn">
+  <option value="Dosen">Dosen</option>
+  <option value="Staff">Staff</option>
+  <option value="Mahasiswa">Mahasiswa</option>
+  <option value="Infrastruktur">Infrastruktur</option>
+  <option value="Pengajaran">Pengajaran</option>
+</select>
+  {{-- </div> --}}
+{{-- </div> --}}
+
 
 					<input type="submit" value="Upload" class="btn btn-primary">
 				</form>

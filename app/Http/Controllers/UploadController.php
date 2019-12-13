@@ -26,6 +26,7 @@ class UploadController extends Controller
         $this->validate($request, [
             'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048',
             'keterangan' => 'required',
+            'aspek' => 'required',
         ]);
 
         // menyimpan data file yang diupload ke variabel $file
@@ -40,6 +41,7 @@ class UploadController extends Controller
         Gambar::create([
             'file' => $nama_file,
             'keterangan' => $request->keterangan,
+            'aspek' => $request->aspek
         ]);
 
         return redirect('/');

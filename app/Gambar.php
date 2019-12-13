@@ -8,5 +8,5 @@ class Gambar extends Model
 {
     protected $table = "gambar";
 
-    protected $fillable = ['file', 'keterangan'];
+    protected $fillable = ['file', 'keterangan', 'aspek'];
 }
