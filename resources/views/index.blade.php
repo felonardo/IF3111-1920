@@ -17,7 +17,7 @@
 			<div class="search-box">
 				<form action="" method="POST">
 					<input name="search" placeholder="Cari" required="yes" type="text">
-			    	<button type="submit">Cari</button>
+			    	<button type="submit" onclick="showCustomer(search)">Cari</button>
 				</form>
             </div>
 
@@ -25,14 +25,6 @@
         </header>
 
 {{-- </div> --}}
-
-<div class="recently">
-<p>Laporan/Komentar terakhir</p><br>
-
-<div class="garis">
-</div>
-
-
 
 				@if(count($errors) > 0)
 				<div class="alert alert-danger">
@@ -43,30 +35,26 @@
                 @endif
 
 
-				<h4 class="my-5">Data</h4>
+                <h4 class="my-5">Data</h4>
 
-				<table class="table table-bordered table-striped">
-					<thead>
-						<tr>
-							<th width="1%">File</th>
-							<th>Keterangan</th>
-							<th>Aspek</th>
-							<th width="1%">OPSI</th>
-						</tr>
-					</thead>
-					<tbody>
-						@foreach($gambar as $g)
-						<tr>
-							<td><img width="150px" src="{{ url('/data_file/'.$g->file) }}"></td>
-							<td>{{$g->keterangan}}</td>
-							<td>{{$g->aspek}}</td>
-                            {{-- <td><a class="btn btn-danger" href="/detail/{{ $g->id }}">Lihat Selengkapnya</a></td> --}}
-                            <td><button type="submit" onclick="showDetail({{$g->id}})">Lihat Selengkapnya</button></td>
-							{{-- <td><a class="btn btn-danger" href="/hapus/{{ $g->id }}">HAPUS</a></td> --}}
-						</tr>
-						@endforeach
-					</tbody>
-				</table>
+<div class="konten">
+			<p>Laporan/Komentar Terakhir</p>
+			<hr>
+    @foreach($gambar as $g)
+			<p>{{$g->keterangan}}</p>
+			<div class="lampiran">
+				Lampiran: {{$g->file}}
+			</div>
+
+			<div class="selengkapnya">
+                Waktu: {{$g->created_at}}
+                <a href="#" onclick="showDetail({{$g->id}})">Lihat Selengkapnya</a>
+			</div>
+            <hr>
+    @endforeach
+		</div>
+
+
 			</div>
     </div>
 </div>

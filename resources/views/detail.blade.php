@@ -21,24 +21,6 @@
 					@endforeach
 				</div>
 				@endif
-{{--
-				<form action="/upload/proses" method="POST" enctype="multipart/form-data">
-					{{ csrf_field() }}
-
-					<div class="form-group">
-						<b>File Gambar</b><br/>
-						<input type="file" name="file">
-					</div>
-
-					<div class="form-group">
-						<b>Keterangan</b>
-						<textarea class="form-control" name="keterangan"></textarea>
-					</div>
-
-					<input type="submit" value="Upload" class="btn btn-primary">
-                </form> --}}
-
-                {{-- <a href="/upload">Buat Laporan</a> --}}
 
 				<h4 class="my-5">Data</h4>
 
@@ -46,7 +28,8 @@
 					<thead>
 						<tr>
 							<th width="1%">File</th>
-							<th>Keterangan</th>
+                            <th>Keterangan</th>
+                            <th>Aspek</th>
 							<th>Waktu</th>
 							<th width="1%">OPSI</th>
 						</tr>
@@ -56,6 +39,7 @@
 						<tr>
 							<td><img width="150px" src="{{ url('/data_file/'.$gambar->file) }}"></td>
                             <td>{{$gambar->keterangan}}</td>
+							<td>{{$gambar->aspek}}</td>
                             <td>{{$gambar->created_at}}</td>
 							<td><button onclick="deleteData({{$gambar->id}})">HAPUS</button></td>
                             {{-- <td><button type="submit" onclick="showDetail({{$g->id}})">Lihat Selengkapnya</button></td> --}}
