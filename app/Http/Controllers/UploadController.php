@@ -20,6 +20,15 @@ class UploadController extends Controller
         $gambar = Gambar::get();
         return view('index', ['gambar' => $gambar->reverse()]);
     }
+    public function search($q)
+    {
+        $gambar = Gambar::where('keterangan', 'LIKE', 'a%')->first();
+
+
+        $gambar->get();
+
+        return view('detail', ['gambar' => $gambar]);
+    }
 
     public function proses_upload(Request $request)
     {

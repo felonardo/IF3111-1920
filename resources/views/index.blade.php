@@ -15,10 +15,10 @@
 
 <header>
 			<div class="search-box">
-				<form action="" method="POST">
-					<input name="search" placeholder="Cari" required="yes" type="text">
-			    	<button type="submit" onclick="showCustomer(search)">Cari</button>
-				</form>
+				{{-- <form action="" method="POST"> --}}
+					<input id="search" placeholder="Cari" required="yes" type="text">
+			    	<button type="submit" onclick="searchData()">Cari</button>
+				{{-- </form> --}}
             </div>
 
                 <button type="submit" onclick="addLaporan()">Buat Laporan/ Komentar</button>
@@ -96,6 +96,18 @@ function deleteData(i) {
     }
   };
   xhttp.open("GET", "/hapus/"+i, true);
+  xhttp.send();
+}
+
+function searchData(q) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("search").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "/search/a", true);
   xhttp.send();
 }
 

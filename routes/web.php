@@ -21,3 +21,4 @@ Route::get('/detail/{id}', 'UploadController@detail');
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');
 Route::get('/hapus/{id}', 'UploadController@hapus');
+Route::get('/search/{q}', 'UploadController@search');
