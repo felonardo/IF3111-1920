@@ -96,8 +96,8 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-`Silakan isi bagian ini dengan penjelasan anda, sesuai Petunjuk Pengerjaan di atas.`
-
+`Instalasi framework yang saya lakukan adalah dengan menggunakan Laravel namun sebelumnya harus menginstal aplikasi composer, setelah itu download repository atau clone atau jika file error dapat mengekstrak file backup yang ada di repository, Untuk koneksi basis data dengan cara pada folder database -> db_tubes_web.sql,dan untuk validasi pada clent-side menggunakan html javascript tipe required pada setiap form atau input type, hal tersebut dapat diuji coba dengan cara klik tombol cari dengan mengkosongkan formnya. 
+untuk AJAX telah diterapkan pada semua fitur seperti fitur hapus dengan menggunakan ajax native XMLHttprequest
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.
 - CSS: margin, padding, header tag, font-size, text-align, float, clear, border, color, div, span, placeholder, 
