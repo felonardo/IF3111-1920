@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="lihat.css">
+    <link rel="stylesheet" href="css/lihat.css">
     <title>Lihat Selengkapnya</title>
 </head>
 
@@ -16,8 +16,9 @@
             <h1>SIMPLE LAPOR!</h1>
         </div>
 
-
+        <div class="home"><a href="">HOME</a></div>
     </header>
+
     <div class="isi">
         <p>Detail Laporan/Komentar</p>
         <hr>
@@ -38,17 +39,15 @@
         <br>
         <div class="detail">
 
-            <p>Waktu</p>
-            <p>Aspek</p>
+            <p>Waktu:</p>
+            <p>Aspek:</p>
             <p class="tombol">Hapus Laporan/Komentar &#9746;</p>
         </div>
         <hr>
     </div>
-
-
-
-
-
+    <footer>
+        <p>Simple Lapor, Copyright &copy; Andika Leonardo</p>
+    </footer>
 </body>
 
 </html>
