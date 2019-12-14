@@ -1,0 +1,39 @@
+#header {
+    text-align: center;
+    font-family: Arial
+}
+
+.tengah {
+
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    font-family: arial;
+
+}
+
+.tengah p {
+    font-size: 14px;
+}
+
+.input {
+    float: left;
+    margin: 2rem 0 1rem;
+    position: relative;
+
+}
+
+.file :hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+.submit :hover {
+    background-color: grey;
+    cursor: pointer;
+
+}
+
+.input label {
+    font-size: 14px;
+}
