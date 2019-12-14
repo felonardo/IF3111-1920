@@ -23,28 +23,27 @@
         <hr>
         <br>
         <div class="input">
-            <textarea name="Laporan/Komentar" id="laporan" cols="132" rows="10"
-                placeholder="Buat Laporan/Komentar!"></textarea>
-            <span></span>
+            <textarea name="Laporan/Komentar" id="laporan" cols="132" rows="10" placeholder="Buat Laporan/Komentar!"></textarea>
             <br><br>
-            <label>Aspek Laporan/Komentar</label>
-            <select>
-                <optgroup Label="Pilih Aspek Laporan/Komentar">
-                    <option value="akademik">Akademik</option>
-                    <option value="sarpras">Sarpras</option>
-                    <option value="dosen">Dosen</option>
-                </optgroup>
-            </select>
-            <br><br>
-            <div class="file">
-                <input type="file">
-            </div>
-            <br><br>
-            <div class="submit">
-                <input type="submit" value="Buat Laporan!">
-            </div>
-            <hr>
         </div>
+        <label>Aspek Laporan/Komentar</label>
+        <select>
+            <optgroup Label="Pilih Aspek Laporan/Komentar">
+                <option value="akademik">Akademik</option>
+                <option value="sarpras">Sarpras</option>
+                <option value="dosen">Dosen</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <div class="file">
+            <input type="file">
+        </div>
+        <br><br>
+        <div class="submit">
+            <input type="submit" value="Buat Laporan!">
+        </div>
+        <hr>
+
     </div>
 </body>
 
