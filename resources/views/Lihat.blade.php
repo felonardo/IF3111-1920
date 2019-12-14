@@ -16,7 +16,6 @@
             <h1>SIMPLE LAPOR!</h1>
         </div>
 
-        <div class="home"><a href="">HOME</a></div>
     </header>
 
     <div class="isi">

@@ -15,13 +15,13 @@
 
 <header>
 			<div class="search-box">
-				{{-- <form action="" method="POST"> --}}
+				<form action="" method="POST">
 					<input id="search" placeholder="Cari" required="yes" type="text">
 			    	<button type="submit" onclick="searchData()">Cari</button>
-				{{-- </form> --}}
+				</form>
             </div>
 
-                <button type="submit" onclick="addLaporan()">Buat Laporan/ Komentar</button>
+                <button onclick="addLaporan()">Buat Laporan/ Komentar</button>
         </header>
 
 {{-- </div> --}}
@@ -34,11 +34,10 @@
 				</div>
                 @endif
 
-
-                <h4 class="my-5">Data</h4>
-
+<br>
+<br>
 <div class="konten">
-			<p>Laporan/Komentar Terakhir</p>
+			<b>Laporan/Komentar Terakhir</b>
 			<hr>
     @foreach($gambar as $g)
 			<p>{{$g->keterangan}}</p>

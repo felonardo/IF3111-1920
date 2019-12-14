@@ -1,0 +1,49 @@
+ header {
+     width: 80%;
+     margin: auto;
+     background: grey;
+     color: white;
+     padding-top: 5px;
+     min-height: 80px;
+ }
+
+ #header {
+     text-align: center;
+     font-family: Arial
+ }
+
+ .home {
+     margin: auto;
+     overflow: hidden;
+     font-family: arial;
+     font-weight: bold;
+ }
+
+ .isi {
+     width: 80%;
+     margin: auto;
+     overflow: hidden;
+     font-family: arial;
+ }
+
+ .detail {
+     display: flex;
+     justify-content: space-between;
+     font-family: arial;
+ }
+
+ .tombol {
+     background: red;
+     border: 0;
+     color: #ffffff;
+ }
+
+ footer {
+     width: 30%;
+     margin: auto;
+     padding: 15px;
+     margin-top: 15px;
+     color: #ffffff;
+     background-color: gray;
+     text-align: center;
+ }
