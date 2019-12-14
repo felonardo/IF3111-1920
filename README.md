@@ -34,7 +34,7 @@ ujian akhir semester (UAS)**
    - Pemahaman dalam penggunaan framework
    - Antarmuka aplikasi
    - Bug free :beetle:
-   ;
+   
 ### Tools :hammer:
 1. Untuk backend, wajib menggunakan PHP framework apapun (Contoh: Codeigniter, Laravel, Slim, Yii dll).
 2. Gunakan MySQL atau basis data relasional lain untuk menyimpan data.
