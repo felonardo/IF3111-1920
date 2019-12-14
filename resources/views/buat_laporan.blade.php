@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="buat.css">
+    <link rel="stylesheet" href="css/buat.css">
     <title>Buat Laporan/Komentar</title>
 </head>
 
 <body>
     <header>
-
         <div id="header">
             <h1>SIMPLE LAPOR!</h1>
         </div>
-
-
+        <div class="home"><a href="index.blade.php">HOME</a> </div>
     </header>
     <div class="tengah">
         <p>Buat Laporan/Komentar</p>
@@ -45,6 +43,9 @@
         <hr>
 
     </div>
+    <footer>
+        <p>Simple Lapor!, Copyright &copy; Andika Leonardo</p>
+    </footer>
 </body>
 
 </html>
