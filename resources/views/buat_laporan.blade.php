@@ -2,72 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/buat.css">
-    <title>Buat Laporan/Komentar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/buat.css">
+  <title>Buat LaporanKomentar</title>
 </head>
 
 <body>
-    <header>
-        <div id="header">
-            <h1>SIMPLE LAPOR!</h1>
-        </div>
-        {{-- <div class="home"><a href="index.blade.php">HOME</a> </div> --}}
-    </header>
-    <div class="tengah">
-        <p>Buat Laporan/Komentar</p>
-        <hr>
-        <br>
-
-				<form action="/upload/proses" method="POST" enctype="multipart/form-data">
-        <div class="input">
-            <textarea name="keterangan" id="laporan" cols="132" rows="10" placeholder="Buat Laporan/Komentar!"></textarea>
-            <br><br>
-        </div>
-        <label>Aspek Laporan/Komentar</label>
-        <select name="aspek">
-            <optgroup Label="Pilih Aspek Laporan/Komentar">
-  <option value="Dosen">Dosen</option>
-  <option value="Staff">Staff</option>
-  <option value="Mahasiswa">Mahasiswa</option>
-  <option value="Infrastruktur">Infrastruktur</option>
-  <option value="Pengajaran">Pengajaran</option>
-            </optgroup>
-        </select>
-        <br><br>
-        <div class="file">
-            <input type="file" name="file">
-        </div>
-        <br><br>
-        <div class="submit">
-            <input type="submit" value="Buat Laporan!">
-        </div>
-				</form>
-        <hr>
-
+  <header>
+    <div id="header">
+      <h1>SIMPLE LAPOR!</h1>
     </div>
-    <footer>
-        <p>Simple Lapor!, Copyright &copy; Andika Leonardo</p>
-    </footer>
+    <div class="home">
+      <ul>
+        <li><a href="index.blade.php">HOME</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="textarea">
+    <form action="/upload/proses" method="POST" enctype="multipart/form-data" action="">
+      <p>Buat Laporan/Komentar</p>
+      <hr>
+      <br>
+      <div class="input">
+        <textarea name="Laporan/Komentar" id="laporan" cols="130" rows="10" placeholder="Buat Laporan/Komentar!"></textarea>
+        <br><br>
+      </div>
+
+      <select>
+        <option selected="selected" disabled="disabled">Pilih Aspek Laporan/Komentar</option>
+        <option value="akademik">Akademik</option>
+        <option value="sarpras">Sarpras</option>
+        <option value="dosen">Dosen</option>
+        <option value="Infrastruktur">Infrastruktur</option>
+        </optgroup>
+      </select>
+      <br><br>
+      <div class="file">
+        <input type="file" name="file">
+      </div>
+      <br>
+      <div class="submit">
+        <input type="button" value="Buat Laporan!">
+      </div>
+
+      <br><br>
+      <hr>
+    </form>
 
 
-
-<script>
-function prosesUpload() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
+  </div>
+  <footer>
+    <p>Simple Lapor!, Copyright &copy; Andika Leonardo</p>
+  </footer>
+  <script>
+    function prosesUpload() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo").innerHTML =
+            this.responseText;
+        }
+      };
+      xhttp.open("GET", "/", true);
+      xhttp.send();
     }
-  };
-  xhttp.open("GET", "/", true);
-  xhttp.send();
-}
-</script>
-
+  </script>
 </body>
 
 </html>
