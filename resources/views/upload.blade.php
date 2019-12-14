@@ -61,7 +61,7 @@
 <br>
 <br>
 <div class="submit">
-					<input type="submit" value="Upload" class="btn btn-primary">
+					<input type="submit" value="Buat Laporan/Komentar " class="btn btn-primary">
             </div>
         	</form>
 

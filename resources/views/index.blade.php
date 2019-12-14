@@ -11,11 +11,13 @@
 	<div class="row">
 		<div class="container">
 
-            <h2 class="h2">Simple Lapor</h2>
+       <header>
+           <b><br>Simple Lapor</b>
+        </header>
 
 <header>
 			<div class="search-box">
-				<form action="" method="POST">
+				<form action="/search/a" method="GET">
 					<input id="search" placeholder="Cari" required="yes" type="text">
 			    	<button type="submit" onclick="searchData()">Cari</button>
 				</form>
@@ -36,8 +38,10 @@
 
 <br>
 <br>
+    <div class="tengah">
+            <p>Laporan/Komentar Terakhir</p>
+            </div>
 <div class="konten">
-			<b>Laporan/Komentar Terakhir</b>
 			<hr>
     @foreach($gambar as $g)
 			<p>{{$g->keterangan}}</p>
