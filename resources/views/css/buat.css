@@ -12,6 +12,11 @@ header {
     font-family: Arial
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .home {
     margin: auto;
     overflow: hidden;
@@ -19,17 +24,36 @@ header {
     font-weight: bold;
 }
 
-.tengah {
+.home ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
 
+.home ul li {
+    float: left;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.textarea {
     width: 80%;
     margin: auto;
     overflow: hidden;
     font-family: arial;
+}
+
+textarea {
+    border: solid 1px black;
 
 }
 
-.tengah p {
+.textarea p {
     font-size: 14px;
+}
+
+select {
+    border: solid 1px black;
 }
 
 .input {
@@ -40,19 +64,22 @@ header {
 }
 
 .file :hover {
-    background-color: green;
+    background-color: grey;
     cursor: pointer;
 }
 
 .submit :hover {
     background-color: grey;
     cursor: pointer;
+}
+
+.submit {
+    float: right;
+    border: 1px solid grey;
+    position: relative;
 
 }
 
-.tengah label {
-    font-size: 14px;
-}
 
 footer {
     width: 78%;
